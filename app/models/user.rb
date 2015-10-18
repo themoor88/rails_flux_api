@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   validates :email, presence: true
 
   private
-  def update_access_token
+  def update_access_token!
     self.access_token = "#{self.id}:#{Devise.friendly_token}"
   end
 end

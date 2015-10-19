@@ -2,11 +2,11 @@ class ApplicationController < ActionController::API
   # This helps with rendering views from outside controllers
   include AbstractController::Translation
 
-  before_action :authenticate_user_from_token!
+  before_action :authenticate_user_from_token
   respond_to :json
 
   # User authentication
-  def authenticate_user_from_token!
+  def authenticate_user_from_token
     auth_token = request.headers['Authorization']
 
     if auth_token

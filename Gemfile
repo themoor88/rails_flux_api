@@ -7,6 +7,7 @@ gem 'devise'
 gem 'pg'
 gem 'sdoc', group: :doc
 gem 'thin'
+gem 'rack-cors'
 
 group :development, :test do
   gem 'faker'
